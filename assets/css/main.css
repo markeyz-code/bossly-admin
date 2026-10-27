@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root { --bg: 8 17 13; --surface: 14 25 20; --raised: 22 36 29; --ink: 238 244 239; --muted: 139 158 146; --line: 41 58 49; color-scheme: dark; }
+  .light { --bg: 246 244 237; --surface: 255 255 255; --raised: 241 238 229; --ink: 8 17 13; --muted: 91 105 96; --line: 218 214 203; color-scheme: light; }
+  html { @apply scroll-smooth; }
+  body { @apply bg-canvas font-sans text-ink antialiased; }
+  h1,h2,h3,h4 { @apply font-display; }
+  button, a, input, select, textarea { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-acid focus-visible:ring-offset-2 focus-visible:ring-offset-canvas; }
+  ::selection { background: #C8FF00; color: #08110D; }
+}
+@layer components {
+  .card { @apply rounded-2xl border border-line bg-surface; }
+  .input-base { @apply w-full rounded-xl border border-line bg-raised px-3.5 py-2.5 text-sm text-ink placeholder:text-muted/60 focus:border-acid; min-height: 44px; }
+  .label-base { @apply mb-1.5 block text-[11px] font-bold uppercase tracking-wider text-muted; }
+  .eyebrow { @apply text-[10px] font-bold uppercase tracking-[0.18em] text-acid; }
+  .mono { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; }
+  .grid-paper { background-image: linear-gradient(rgb(var(--line) / .5) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--line) / .5) 1px, transparent 1px); background-size: 32px 32px; }
+  .skeleton { @apply animate-pulse rounded-xl bg-raised; }
+}
