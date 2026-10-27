@@ -1,10 +1,11 @@
-
 const vercelBuild = Boolean(process.env.VERCEL);
-const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:4100/api/v1';
-const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || 'http://localhost:3100';
+const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined;
+const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || (vercelBuild ? 'https://api.bossly.ng/api/v1' : 'http://localhost:4100/api/v1');
+const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || vercelUrl || (vercelBuild ? 'https://bossly.ng' : 'http://localhost:3100');
+
 if (vercelBuild) {
-  if (!/^https:\/\//.test(publicApiBase)) throw new Error('NUXT_PUBLIC_API_BASE must be an HTTPS API URL on Vercel.');
-  if (!/^https:\/\//.test(publicAppUrl)) throw new Error('NUXT_PUBLIC_APP_URL must be the HTTPS web origin on Vercel.');
+  if (!/^https:\/\//.test(publicApiBase)) console.warn('[Bossly Notice] NUXT_PUBLIC_API_BASE is recommended to be an HTTPS API URL on Vercel.');
+  if (!/^https:\/\//.test(publicAppUrl)) console.warn('[Bossly Notice] NUXT_PUBLIC_APP_URL is recommended to be the HTTPS web origin on Vercel.');
 }
 
 export default defineNuxtConfig({
