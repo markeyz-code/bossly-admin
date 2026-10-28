@@ -23,7 +23,7 @@ export default defineNuxtConfig({
       link: [{ rel: 'manifest', href: '/manifest.webmanifest' }, { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }, { rel: 'apple-touch-icon', href: '/pwa-192.png' }],
     },
   },
-  routeRules: { '/**': { ssr: false } },
+  routeRules: { '/**': { ssr: false, headers: { 'Cache-Control': 'no-store, max-age=0, must-revalidate' } } },
   tailwindcss: { cssPath: '~/assets/css/main.css', configPath: '~/tailwind.config.ts', viewer: false },
   pwa: {
     registerType: 'autoUpdate',
