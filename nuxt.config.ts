@@ -1,12 +1,7 @@
-const vercelBuild = Boolean(process.env.VERCEL);
+const isProd = process.env.NODE_ENV === 'production' || Boolean(process.env.VERCEL) || Boolean(process.env.RAILWAY_ENVIRONMENT) || Boolean(process.env.RENDER);
 const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined;
-const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || (vercelBuild ? 'https://api.ojaly.org/api/v1' : 'http://localhost:4100/api/v1');
-const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || vercelUrl || (vercelBuild ? 'https://ojaly.org' : 'http://localhost:3100');
-
-if (vercelBuild) {
-  if (!/^https:\/\//.test(publicApiBase)) console.warn('[Ojaly Notice] NUXT_PUBLIC_API_BASE is recommended to be an HTTPS API URL on Vercel.');
-  if (!/^https:\/\//.test(publicAppUrl)) console.warn('[Ojaly Notice] NUXT_PUBLIC_APP_URL is recommended to be the HTTPS web origin on Vercel.');
-}
+const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || (isProd ? 'https://api.ojaly.org/api/v1' : 'http://localhost:4100/api/v1');
+const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || vercelUrl || (isProd ? 'https://ojaly.org' : 'http://localhost:3100');
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
