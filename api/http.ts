@@ -23,7 +23,7 @@ export function setupHttp(base: string) {
         const refreshed = await refresh();
         if (refreshed) return http().request(config);
         adminTokenStorage.clear();
-        if (import.meta.client) window.dispatchEvent(new CustomEvent('bossly:admin-expired'));
+        if (import.meta.client) window.dispatchEvent(new CustomEvent('ojaly:admin-expired'));
       }
       throw normalizeAdminError(error);
     },

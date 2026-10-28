@@ -51,6 +51,6 @@ export const adminApi = {
     const response = await http().get(`/admin/exports/${resource}`, { params, responseType: 'blob' });
     const disposition = String(response.headers['content-disposition'] || '');
     const match = /filename="([^"]+)"/.exec(disposition);
-    return { blob: response.data as Blob, filename: match?.[1] || `bossly-${resource}.csv` };
+    return { blob: response.data as Blob, filename: match?.[1] || `ojaly-${resource}.csv` };
   },
 };

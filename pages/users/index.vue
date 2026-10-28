@@ -22,7 +22,7 @@ onMounted(load);
 
 <template>
   <div class="space-y-5">
-    <PageHeading title="Users" subtitle="Every person on Bossly, their businesses and their platform access." eyebrow="Network">
+    <PageHeading title="Users" subtitle="Every person on Ojaly, their businesses and their platform access." eyebrow="Network">
       <template #actions><AdminButton variant="outline" :loading="exporting === 'users'" @click="exportCsv">Export CSV</AdminButton><AdminButton variant="outline" :loading="loading" @click="load"><RefreshCw class="h-3.5 w-3.5" /> Refresh</AdminButton></template>
     </PageHeading>
     <div class="flex flex-col gap-2 sm:flex-row">

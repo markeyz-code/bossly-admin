@@ -42,7 +42,7 @@ onMounted(reload);
 
 <template>
   <div class="space-y-5">
-    <PageHeading title="Affiliates & payouts" subtitle="Who is bringing businesses to Bossly, what they earned and what needs to be paid." eyebrow="Growth">
+    <PageHeading title="Affiliates & payouts" subtitle="Who is bringing businesses to Ojaly, what they earned and what needs to be paid." eyebrow="Growth">
       <template #actions><AdminButton variant="outline" :loading="loading" @click="reload"><RefreshCw class="h-3.5 w-3.5" /> Refresh</AdminButton><AdminButton variant="outline" :loading="exporting === 'affiliates'" @click="exportRows('affiliates')"><Download class="h-3.5 w-3.5" /> Export affiliates</AdminButton><AdminButton variant="outline" :loading="exporting === 'affiliate-payouts'" @click="exportRows('affiliate-payouts')"><Download class="h-3.5 w-3.5" /> Export payouts</AdminButton></template>
     </PageHeading>
 

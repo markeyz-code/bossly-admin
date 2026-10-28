@@ -30,14 +30,14 @@ async function submit() {
         <h1 class="mt-2 font-display text-2xl font-bold tracking-tight">Platform access only.</h1>
         <p class="mt-1.5 text-xs leading-relaxed text-muted">Manage the network, revenue and trust systems. Every action is recorded in the audit log.</p>
         <form class="mt-5 space-y-3" @submit.prevent="submit">
-          <AdminInput v-model="email" label="Work email" type="email" placeholder="you@bossly.ng" />
+          <AdminInput v-model="email" label="Work email" type="email" placeholder="you@ojaly.ng" />
           <AdminInput v-model="password" label="Password" type="password" placeholder="••••••••" />
           <div v-if="error" class="rounded-lg border border-danger/20 bg-danger/5 p-2.5 text-[11px] text-danger" role="alert">{{ error }}</div>
           <AdminButton type="submit" block :loading="submitting">Enter control room <ArrowRight class="h-3.5 w-3.5" /></AdminButton>
         </form>
         <div class="mt-5 flex items-start gap-2 rounded-lg bg-raised/60 p-2.5 text-[10px] leading-relaxed text-muted"><LockKeyhole class="mt-0.5 h-3.5 w-3.5 shrink-0 text-acid" /> Support accounts have read-only access. Only super admins can change plans, trials or users.</div>
       </div>
-      <p class="mt-4 flex items-center justify-center gap-1 text-[9px] text-muted"><ShieldCheck class="h-3 w-3" /> Bossly internal systems · not indexed</p>
+      <p class="mt-4 flex items-center justify-center gap-1 text-[9px] text-muted"><ShieldCheck class="h-3 w-3" /> Ojaly internal systems · not indexed</p>
     </div>
   </div>
 </template>

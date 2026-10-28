@@ -1,6 +1,6 @@
-# Bossly admin console
+# Ojaly admin console
 
-Internal Nuxt 3 + TypeScript + Tailwind + Pinia console for the Bossly platform team. Dark-first, mobile-responsive, installable PWA, `noindex`.
+Internal Nuxt 3 + TypeScript + Tailwind + Pinia console for the Ojaly platform team. Dark-first, mobile-responsive, installable PWA, `noindex`.
 
 ## Run
 
@@ -12,10 +12,10 @@ pnpm dev:admin
 
 - URL: http://localhost:3101
 - API: `http://localhost:4100/api/v1`
-- Build: `pnpm --filter @bossly/admin build`
-- Typecheck: `pnpm --filter @bossly/admin lint`
+- Build: `pnpm --filter @ojaly/admin build`
+- Typecheck: `pnpm --filter @ojaly/admin lint`
 
-Use the seeded super admin (`admin@bossly.ng` / `ChangeMe123!` by default). Change it for any shared environment.
+Use the seeded super admin (`admin@ojaly.ng` / `ChangeMe123!` by default). Change it for any shared environment.
 
 ## Access model
 

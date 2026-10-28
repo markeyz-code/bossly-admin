@@ -1,5 +1,5 @@
-const ACCESS = 'bossly.admin.access';
-const REFRESH = 'bossly.admin.refresh';
+const ACCESS = 'ojaly.admin.access';
+const REFRESH = 'ojaly.admin.refresh';
 export const adminTokenStorage = {
   getAccess: () => import.meta.client ? localStorage.getItem(ACCESS) : null,
   getRefresh: () => import.meta.client ? localStorage.getItem(REFRESH) : null,
