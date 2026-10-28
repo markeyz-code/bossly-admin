@@ -15,7 +15,7 @@ pnpm dev:admin
 - Build: `pnpm --filter @ojaly/admin build`
 - Typecheck: `pnpm --filter @ojaly/admin lint`
 
-Use the seeded super admin (`admin@ojaly.ng` / `ChangeMe123!` by default). Change it for any shared environment.
+Use the seeded super admin (`admin@ojaly.org` / `ChangeMe123!` by default). Change it for any shared environment.
 
 ## Access model
 

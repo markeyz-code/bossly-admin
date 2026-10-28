@@ -1,7 +1,7 @@
 const vercelBuild = Boolean(process.env.VERCEL);
 const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined;
-const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || (vercelBuild ? 'https://api.ojaly.ng/api/v1' : 'http://localhost:4100/api/v1');
-const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || vercelUrl || (vercelBuild ? 'https://ojaly.ng' : 'http://localhost:3100');
+const publicApiBase = process.env.NUXT_PUBLIC_API_BASE || (vercelBuild ? 'https://api.ojaly.org/api/v1' : 'http://localhost:4100/api/v1');
+const publicAppUrl = process.env.NUXT_PUBLIC_APP_URL || vercelUrl || (vercelBuild ? 'https://ojaly.org' : 'http://localhost:3100');
 
 if (vercelBuild) {
   if (!/^https:\/\//.test(publicApiBase)) console.warn('[Ojaly Notice] NUXT_PUBLIC_API_BASE is recommended to be an HTTPS API URL on Vercel.');
